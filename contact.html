@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Get in Touch | SapienBot</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@300..700&family=Source+Serif+4:wght@200..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<!--header-->
+<header>
+    <div class="logo-brand">
+        <a href="index.html">
+            <img src="images/sapienbot_logo.png" alt="SapienBot Logo"/>
+            <!-- Source: https://www.flaticon.com/free-icons/machine-learning -->
+        </a>
+    </div>
+
+    <!--navigation bar -->
+    <nav class="section-menu-list">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!--main section-->
+<main class="support-container">
+    <h1>SapienBot Support Team</h1>
+    <p>Do you have questions? Reach out through your form.</p>
+
+    <!-- User Inquiry Form Starts Here-->
+    <form class="inquiry-form">
+
+        <!-- Full Name Input Field -->
+        <label for="name">Your Name</label>
+        <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                minlength="3"
+                maxlength="30"
+                placeholder="Example: Jane Smith"
+                title="Enter your full name (3-30 characters)."
+        />
+
+        <!--Contact Number Field for User Communication-->
+        <label for="phone">Your Phone</label>
+        <input
+                type="text"
+                id="phone"
+                name="phone"
+                required
+                pattern="[0-9]{10}"
+                placeholder="e.g., 9876543210"
+                title="Please provide a valid 10-digit contact number."
+        />
+
+        <!-- Email Address Input for Correspondence -->
+        <label for="email">Your Email</label>
+        <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="yourname@example.com"
+                title="Ensure a proper email format (yourname@provider.com)."
+        />
+
+        <!--     Message Textarea     -->
+        <label for="message">Your Message</label>
+        <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Write your message here..."
+        ></textarea>
+
+        <!--     Contact Reason Selection (Radio Buttons)     -->
+        <label>Reason for Contact</label>
+        <div class="radio-group">
+            <label>
+                <input type="radio" name="topic" value="sales" checked/>
+                Product Details
+            </label>
+            <label>
+                <input type="radio" name="topic" value="technical"/>
+                Technical Help
+            </label>
+            <label>
+                <input type="radio" name="topic" value="partnership"/>
+                Business Collaboration
+            </label>
+        </div>
+
+        <!--Dropdown section-->
+        <label for="priority-order">Priority of Request</label>
+        <select id="priority-order" name="priority-order-name">
+            <option value="high-priority">High</option>
+            <option value="medium-priority" selected>Medium</option>
+            <option value="low-priority">Low</option>
+        </select>
+
+        <!--Checkbox-->
+        <label>
+            <input name="terms-checkbox" type="checkbox" value="agree" required/>
+            I confirm agreement to the Terms & Policies
+        </label>
+
+        <!--Subscription Checkbox-->
+        <label>
+            <input name="newsletter-checkbox" type="checkbox" value="subscribe"/>
+            Sign me up for the newsletter
+        </label>
+
+        <!--Submit Button-->
+        <button type="submit">Submit</button>
+    </form>
+
+    <!--Social Media-->
+    <div class="social-media-links">
+        <div class="social-media-icon-container">
+            <!--     TikTok Link     -->
+            <a href="https://www.tiktok.com" target="_blank">
+                <img src="images/tiktok.png" alt="TikTok Link" width="40"/>
+                <!-- Source: https://www.flaticon.com/free-icons/tiktok -->
+                <span>TikTok</span>
+            </a>
+
+            <!--     Twitter Link     -->
+            <a href="https://x.com" target="_blank">
+                <img src="images/x.png" alt="Twitter Link" width="40"/>
+                <!-- Source: https://www.flaticon.com/free-icons/twitter-x -->
+                <span>Twitter</span>
+            </a>
+
+            <!--     YouTube Link     -->
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="images/youtube.png" alt="YouTube Link" width="40"/>
+                <!-- Source:https://www.flaticon.com/free-icons/youtube -->
+                <span>YouTube</span>
+            </a>
+        </div>
+    </div>
+</main>
+
+<!-- section footer -->
+<footer>
+    <p>2025 SapienBot | All rights reserved</p>
+</footer>
+
+</body>
+</html>

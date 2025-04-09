@@ -1,0 +1,353 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header & Navigation Menu */
+header {
+    background-color: rgba(34, 34, 34, 0.68);
+    display: grid;
+    padding: 11px 19px;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+/*General Text Formatting*/
+h1, h2, h3 {
+    text-align: center;
+    margin-top: 0;
+    font-weight: 587;
+    font-family: "Source Serif 4", serif;
+}
+
+/* Dynamic Typography Scaling */
+h1 {
+    margin-bottom: 1.1em;
+    font-size: 2.5rem;
+}
+
+
+h2 {
+    margin-bottom: 0.5em;
+    font-size: 1.7rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.4em;
+}
+
+/*Primary Layout Structure*/
+body {
+    /* Background optimized for readability */
+    background: url("../images/back_ground.jpg") no-repeat center center fixed;
+    /*Source: https://www.wired.com/story/fast-forward-humanoid-robots-are-coming-of-age/ */
+    display: flex;
+    flex-direction: column;
+    font-family: "Signika", serif;
+    color: #333;
+    position: relative;
+    background-size: cover;
+}
+
+/*  Layered Overlay Effect*/
+/* Helps achieve a semi-transparent background effect */
+body::before {
+    background-color: rgba(0, 0, 0, 0.15);
+    content: "";
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    left: 0;
+    z-index: -1;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1.1em;
+    text-align: center;
+    line-height: 1.6;
+}
+
+
+/*Ensuring Branding Visibility*/
+.logo-brand img {
+    height: 51px;
+}
+
+/* Navigation Links Configuration*/
+.section-menu-list ul {
+    list-style: none;
+    display: flex;
+    gap: 23px;
+}
+
+/* Custom Styling for Menu Items */
+.section-menu-list ul li a {
+    padding: 6px 12px;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 3px;
+}
+
+/* Enhancing User Interaction */
+.section-menu-list ul li a:hover,
+.section-menu-list ul li a.active {
+    background-color: rgba(68, 68, 68, 0.94);
+}
+
+/*Main Content Formatting*/
+main {
+    background-color: rgba(255, 255, 255, 0.55);
+    flex: 1;
+    border-radius: 8px;
+    max-width: 996px;
+    width: 90%;
+    box-shadow: 0 3px 14px rgba(0, 0, 0, 0.24);
+    margin: 47px auto;
+    padding: 28px;
+}
+
+/* Hero Banner Styling */
+.hero-container img {
+    max-width: 59%;
+    height: auto;
+    margin-top: 21px;
+    display: block; /*  Ensuring the image remains responsive */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Key Features Section*/
+.features-list {
+    text-align: center
+}
+
+/* Enhancing Readability of Feature List */
+
+.features-list ul {
+    text-align: left;
+    list-style-type: square;
+    display: inline-block;
+    margin: 21px auto;
+    padding: 0;
+}
+
+.features-list ul li {
+    margin: 5px 0;
+    font-weight: 499;
+}
+
+/*  Gallery Image Display */
+.image-showcase-section {
+    display: grid;
+    gap: 21px;
+    grid-template-columns: repeat(auto-fit, minmax(248px, 1fr));
+    justify-content: center;
+}
+
+/* Hover Effects for Image Cards */
+
+.image-showcase-section figure {
+    padding: 9px;
+    background-color: rgba(255, 255, 255, 0.72);
+    width: 248px;
+    border-radius: 7px;
+    text-align: center;
+    border: 1px solid rgba(204, 204, 204, 0.93);
+}
+
+.image-showcase-section figure:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.45);
+}
+
+/* Ensuring Image Responsiveness */
+
+.image-showcase-section img {
+    width: 100%;
+    border-radius: 3px;
+    height: auto;
+}
+
+.image-showcase-section figcaption {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+/*Contact Directory Table*/
+.support-contacts table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 600px;
+}
+
+/* Styling Table Elements */
+
+.support-contacts th,
+.support-contacts td {
+    border: 1px solid #cccccc;
+    padding: 9px 14px;
+    text-align: left;
+}
+
+
+/* Contact Form Section */
+.inquiry-form {
+    max-width: 598px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Label Styling for Inputs */
+
+.inquiry-form label {
+    font-weight: 498;
+    margin: 9px 0 4px;
+    text-align: left;
+}
+
+/* Input Field Customization */
+
+.inquiry-form input[type="text"],
+.inquiry-form input[type="email"],
+.inquiry-form textarea,
+.inquiry-form select {
+    padding: 8px;
+    border: 1px solid rgba(204, 204, 204, 0.95);
+    border-radius: 3px;
+    margin-bottom: 15px;
+    width: 98%;
+}
+
+/* Enhancing Checkbox Visibility */
+
+.inquiry-form input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+/* Form Submission Button */
+.inquiry-form button {
+    padding: 12px 16px;
+    font-size: 1.1rem;
+    background-color: #222;
+    color: #fff;
+    font-weight: 599;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+
+.inquiry-form button:hover {
+    background-color: #0066cc;
+}
+
+.inquiry-form p {
+    margin-top: 14px;
+    font-weight: 498;
+}
+
+/* Footer Styling */
+footer {
+    background-color: rgba(34, 34, 34, 0.84);
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+
+
+/* Radio Buttons */
+.radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* Responsive Media Query */
+@media (max-width: 767px) {
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .section-menu-list ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .hero-container img {
+        max-width: 88%;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .features-list ul {
+        margin-top: 13px;
+    }
+
+    .support-contacts table {
+        min-width: 499px;
+        width: 99%;
+    }
+
+    .support-contacts {
+        overflow-x: auto;
+    }
+}
+
+
+/* Social Media Styling  (Contact Page) */
+.social-links {
+    text-align: center;
+    margin-top: 29px;
+}
+
+.social-media-icon-container {
+    margin-top: 19px;
+    display: flex;
+    justify-content: center;
+    gap: 29px;
+}
+
+.social-media-icon-container a {
+    color: rgba(51, 51, 51, 0.86);
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+
+.social-media-icon-container a img {
+    transition: transform 0.4s ease;
+    width: 49px;
+    height: 49px;
+}
+
+.social-media-icon-container a:hover img {
+    transform: scale(1.1);
+}
+
+.social-media-icon-container a span {
+    font-size: 0.7rem;
+    font-weight: 599;
+    margin-top: 5px;
+}
